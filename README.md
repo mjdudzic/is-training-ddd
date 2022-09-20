@@ -1,6 +1,6 @@
 # Szkolenie Domain Driven Design
 
-Repozytorium zawiera materiały przygotowane na potrzeby szkolenia z tematu `Domain Dirven Design`
+Repozytorium zawiera materiały przygotowane na potrzeby szkolenia z tematu `Domain Driven Design`
 
 ## Przygotowanie środowiska
 
@@ -33,6 +33,11 @@ To czy na komupterze jest zainstalowany .NET 6 można sprawdzić wykonując poni
 (wynik powyższej komendy to np. 6.0.401)
 ```
 
+### VS Code
+
+Narzędzie ułatwiające budowę i uruchamianie aplikacji np. z wykorzytaniem technologii Angular
+Do pobrania tutaj: https://code.visualstudio.com/
+
 ### Git dla systemu Windows
 
 Narzędzie do kontoli wersji "Git" ułatwi pracę z repozytorium używanym na potrzeby szkolenia. Dlatego zalecane jest posiadanie tego narzędzia (nie jest to jednak konieczne).
@@ -41,10 +46,37 @@ Jeżeli na komputerze nie był wczesniej instalowany Git to można go zainstalow
 
 https://git-scm.com/download/win
 
-### Weryfikacja środowiska
+### Angular
 
-W celu weryfikacji środowiska należy otworzyć przykładową solucję, skompilowac kod i uruchomić projekt aplikacji webowej `WebApp`
-Solucja znajduje się tutaj: `Training.Prework/TrainingPrework.sln`
-(repo: https://github.com/mjdudzic/is-csharp-async)
+Angular to narżędzie do budowy aplikacji klienta typu SPA. Aby umożliwić uruchomienie aplikacji na loklanym środowisku należy wykonać poniższe kroki:
 
-Jeżeli środowisko jest OK solucja skompiluje się bez błędów i zostanie uruchomiona strona startowa `/swagger/index.html`
+#### Node.js
+
+Zainstaluj `node.js` --> https://nodejs.org/en/download/
+
+#### Angular CLI
+
+Używając `Windows Command Prompt` lub `Powershell` (lub innej aplikacji typu terminal) wykonaj polecenie
+
+```
+npm install -g @angular/cli
+```
+
+W przyapdku użucia `Powershell` jeżeli powyższa komenda zakońćzy się niepowodzeniem konieczne może być wykonanie najpierw polecenie
+
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
+#### Więcej szczegółów
+
+Szczegóły przygotowania środowiska dostępne są tutaj https://angular.io/guide/setup-local
+
+### SQL Server (opcjonalnie)
+
+Silnik bazy danych
+
+- w wersji Developer: https://go.microsoft.com/fwlink/?linkid=866662
+- w wersji Express: https://go.microsoft.com/fwlink/?linkid=866658
+
+Wybór dowolny
