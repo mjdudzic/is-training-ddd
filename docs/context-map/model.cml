@@ -1,0 +1,97 @@
+ContextMap ClaimsVettingContextMap {
+	type = SYSTEM_LANDSCAPE
+	state = TO_BE
+	/* Add bounded contexts to this context map: */
+	contains SubmissionContext
+	contains ClaimsVettingContext
+	contains PaymentContext
+	contains CodesValidatorContext
+	contains InsuranceValidatorContext
+	contains TariffsValidatorContext
+	contains HealthcareFacilityIdentityContext
+	contains ClaimsIdentityContext
+
+	/* Define the context relationships: */
+	ClaimsVettingContext [D, C]<-[U, S] SubmissionContext
+
+	ClaimsVettingContext [D, ACL]<-[U, OHS] PaymentContext
+
+	SubmissionContext [D]<-[U, OHS] CodesValidatorContext
+
+	ClaimsVettingContext [D]<-[U, OHS] InsuranceValidatorContext
+
+	ClaimsVettingContext [D]<-[U, OHS] TariffsValidatorContext
+
+	SubmissionContext [D]<-[U, OHS] TariffsValidatorContext
+
+	SubmissionContext [D]<-[U, OHS] HealthcareFacilityIdentityContext
+
+	ClaimsVettingContext [D]<-[U, OHS] ClaimsIdentityContext
+}
+
+/* Bounded Context Definitions */
+BoundedContext SubmissionContext implements SubmissionDomain
+
+BoundedContext ClaimsVettingContext implements ClaimsAutovettingDomain, ClaimsManualProcessingDomain
+
+BoundedContext PaymentContext implements PaymentDomain
+
+BoundedContext CodesValidatorContext implements CodesValidatorDomain
+
+BoundedContext InsuranceValidatorContext implements InsuranceValidatorDomain
+
+BoundedContext TariffsValidatorContext implements TariffsValidatorDomain
+
+BoundedContext HealthcareFacilityIdentityContext implements HealthcareFacilityIdentityDomain
+
+BoundedContext ClaimsIdentityContext implements ClaimsIdentityDomain
+
+/* Domain & Subdomain Definitions */
+Domain ClaimsVettingDomain {
+	Subdomain SubmissionDomain {
+		type = CORE_DOMAIN
+		domainVisionStatement = "Subdomain managing submission process."
+	}
+
+	Subdomain ClaimsAutovettingDomain {
+		type = CORE_DOMAIN
+		domainVisionStatement = "Subdomain managing auto-vetting."
+	}
+
+	Subdomain ClaimsManualProcessingDomain {
+		type = CORE_DOMAIN
+		domainVisionStatement = "Subdomain managing claims manual processing."
+	}
+
+	Subdomain PaymentDomain {
+		type = SUPPORTING_DOMAIN
+		domainVisionStatement = "Service (external system) to handle batch pyament process"
+	}
+
+	Subdomain CodesValidatorDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Service (external system) to handle claim codes validation"
+	}
+
+	Subdomain InsuranceValidatorDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Service (external system) to handle insurance validation"
+	}
+
+	Subdomain TariffsValidatorDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Service (external system) to handle claim tariffs validation"
+	}
+
+	Subdomain HealthcareFacilityIdentityDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Service (external system) to handle healthcare facility authentication"
+	}
+
+	Subdomain ClaimsIdentityDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Service (external system) to handle Claims user authentication"
+	}
+
+}
+

@@ -1,0 +1,558 @@
+{
+  "id" : 1,
+  "name" : "Name",
+  "description" : "Description",
+  "revision" : 0,
+  "lastModifiedDate" : "2022-10-10T12:12:22Z",
+  "lastModifiedAgent" : "structurizr-web/2827/diagram",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlckhlYWx0aGNhcmVGYWNpbGl0eSA9IHBlcnNvbiAiSGVhbHRoY2FyZSBmYWNpbGl0eSB1c2VyIgogICAgICAgIHN5c3RlbUhlYWx0aGNhcmVGYWNpbGl0eUlkZW50aXR5ID0gc29mdHdhcmVTeXN0ZW0gIkhlYWx0aGNhcmUgRmFjaWxpdHkgSWRlbnRpdHkiICJBbGxvd3MgYSB1c2VyIHRvIGF1dGhlbnRpY2F0ZSIgIlN1cHBvcnRpbmcgU3lzdGVtIgogICAgICAgIHN5c3RlbUNvZGVzVmFsaWRhdG9yID0gc29mdHdhcmVTeXN0ZW0gIkNvZGVzIHZhbGlkYXRvciIgIkFsbG93cyBkaWFnbm9zaXMgYW5kIG1lZGljaW5lIGNvZGUgdmFsaWRhdGlvbiIgIlN1cHBvcnRpbmcgU3lzdGVtIgogICAgICAgIHN5c3RlbUV2ZW50QnVzID0gc29mdHdhcmVTeXN0ZW0gIkV2ZW50IGJ1cyIgIkFsbG93cyBldmVudC1kcml2ZW4gaW50ZWdyYXRpb24gd2l0aCBvdGhlciBzeXN0ZW1zIiAiU3VwcG9ydGluZyBTeXN0ZW0iCiAgICAgICAgc3lzdGVtQmxvYnMgPSBzb2Z0d2FyZVN5c3RlbSAiQmxvYiBzdG9yYWdlIiAiQXp1cmUgQmxvYnMgc3RvcmFnZSIgIlN1cHBvcnRpbmcgU3lzdGVtIgoKICAgICAgICBzeXN0ZW1DbGFpbXNTdWJtaXNzaW9uID0gc29mdHdhcmVTeXN0ZW0gIkNsYWltcyBzdWJtaXNzaW9uIiAiQWxsb3dzIGEgSGVhbHRoY2FyZSBGYWNpbGl0eSB1c2VyIHRvIHVwbG9hZCBhbmQgc3VibWl0IGEgYmF0Y2ggZmlsZSIgewogICAgICAgICAgICBzaW5nbGVQYWdlQXBwbGljYXRpb24gPSBjb250YWluZXIgIlNpbmdsZS1QYWdlIEFwcGxpY2F0aW9uIiAiUHJvdmlkZXMgYWxsIG9mIHRoZSB1cGxvYWQgYW5kIHN1Ym1pc3Npb24gZnVuY3Rpb25hbGl0aWVzIHRvIGhlYWx0aGNhcmUgZmFjaWxpdHkgdmlhIHRoZWlyIHdlYiBicm93c2VyLiIgIkFuZ3VsYXIiICJXZWIgQnJvd3NlciIKICAgICAgICAgICAgYXBpQXBwbGljYXRpb24gPSBjb250YWluZXIgIkFQSSBBcHBsaWNhdGlvbiIgIlByb3ZpZGVzIHVwbG9hZCBhbmQgc3VibWlzc2lvbiBmdW5jdGlvbmFsaXRpZXMgdmlhIGEgUkVTVCBBUEkuIiAiQVNQLk5FVCBDb3JlIEFQSSIgewogICAgICAgICAgICAgICAgYmF0Y2hGaWxlc0NvbnRyb2xsZXIgPSBjb21wb25lbnQgIkJhdGNoIEZpbGVzIENvbnRyb2xsZXIiICJBbGxvd3MgYSBoZWFsdGhjYXJlIGZhY2lsaXR5IHRvIG9wZXJhdGUgb24gYmF0Y2ggZmlsZXMuIiAiQVNQLk5FVCBDb3JlIENvbnRyb2xsZXIiCiAgICAgICAgICAgICAgICBjb2Rlc1ZhbGlkYXRpb25GYWNhZGUgPSBjb21wb25lbnQgIkNvZGVzIHZhbGlkYXRpb24gRmFjYWRlIiAiQWxsb3dzIHZhbGlkYXRpbmcgZGlhZ25vc2lzIGFuZCBtZWRpY2luZXMgY29kZSIgIm5ldDYgbGlicmFyeSIgCiAgICAgICAgICAgICAgICBhdXRob3JpemF0aW9uQ29tcG9uZW50ID0gY29tcG9uZW50ICJBdXRob3JpemF0aW9uIENvbXBvbmVudCIgIkFsbG93cyBhdXRob3JpemluZyBhIHVzZXIuIiAiT3BlbklEIENvbmVjdCBtaWRkbGV3YXJlIgogICAgICAgICAgICAgICAgcGVyc2lzdGVuY2VDb21wb25lbnQgPSBjb21wb25lbnQgIlBlcnNpc3RlbmNlIENvbXBvbmVudCIgIkFsbG93cyB0byByZWFkIGFuZCB3cml0ZSBmcm9tIGRhdGEgc3RvcmUuIiAiRUYgQ29yZSIKICAgICAgICAgICAgICAgIGZpbGVTdG9yYWdlQ29tcG9uZW50ID0gY29tcG9uZW50ICJGaWxlIFN0b3JhZ2UgQ29tcG9uZW50IiAiQWxsb3dzIHRvIHJlYWQgYW5kIHdyaXRlIGZpbGVzIGZyb20gQmxvYnMuIiAibmV0NiBsaWJyYXJ5IgogICAgICAgICAgICAgICAgZXZlbnRCdXNDb21wb2VuZW50ID0gY29tcG9uZW50ICJFdmVudCBCdXMgQ29tcG9uZW50IiAiQWxsb3dzIHRvIHNlbmQgZXZlbnRzIGludG8gQnVzIiAibmV0NiBsaWJyYXJ5IgogICAgICAgICAgICB9CiAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJEYXRhYmFzZSIgIlN0b3JlcyBiYXRjaCBmaWxlIHByb2Nlc3NpbmcgcmVsYXRlZCBkYXRhIiAiU1FMIFNlcnZlciIgIkRhdGFiYXNlIgogICAgICAgIH0KCiAgICAgICAgIyByZWxhdGlvbnNoaXBzIGJldHdlZW4gcGVvcGxlIGFuZCBzb2Z0d2FyZSBzeXN0ZW1zCiAgICAgICAgdXNlckhlYWx0aGNhcmVGYWNpbGl0eSAtPiBzeXN0ZW1DbGFpbXNTdWJtaXNzaW9uICJVc2VzIgogICAgICAgIHVzZXJIZWFsdGhjYXJlRmFjaWxpdHkgLT4gc3lzdGVtSGVhbHRoY2FyZUZhY2lsaXR5SWRlbnRpdHkgIkF1dGhlbnRpY2F0ZXMgaW4iCgogICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIGNvbnRhaW5lcnMKICAgICAgICB1c2VySGVhbHRoY2FyZUZhY2lsaXR5IC0+IHNpbmdsZVBhZ2VBcHBsaWNhdGlvbiAiTWFuYWdlcyBiYXRjaCBmaWxlcyIgIkhUVFBTIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBjb21wb25lbnRzCiAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uIC0+IGJhdGNoRmlsZXNDb250cm9sbGVyICJNYWtlcyBBUEkgY2FsbHMgdG8iICJSRVNUL0hUVFBTIgogICAgICAgIGF1dGhvcml6YXRpb25Db21wb25lbnQgLT4gc3lzdGVtSGVhbHRoY2FyZUZhY2lsaXR5SWRlbnRpdHkgIkF1dGhvcml6ZXMgYSB1c2VyIGluIgogICAgICAgIGNvZGVzVmFsaWRhdGlvbkZhY2FkZSAtPiBzeXN0ZW1Db2Rlc1ZhbGlkYXRvciAiVmFsaWRhdGVzIGRhdGEgYnlzIHVpc25nIgogICAgICAgIGV2ZW50QnVzQ29tcG9lbmVudCAtPiBzeXN0ZW1FdmVudEJ1cyAiU2VuZHMgaW50ZWdyYXRpb24gZXZlbnRzIHRvIgogICAgICAgIGZpbGVTdG9yYWdlQ29tcG9uZW50IC0+IHN5c3RlbUJsb2JzICJTdG9yZXMgZmlsZXMgaW4iCiAgICAgICAgcGVyc2lzdGVuY2VDb21wb25lbnQgLT4gZGF0YWJhc2UgIlJlYWRzIGFuZCB3cml0ZXMgZGF0YSBmcm9tL3RvIgogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICBzeXN0ZW1Db250ZXh0IHN5c3RlbUNsYWltc1N1Ym1pc3Npb24gIlN5c3RlbUNvbnRleHQiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGFuaW1hdGlvbiB7CiAgICAgICAgICAgICAgICB1c2VySGVhbHRoY2FyZUZhY2lsaXR5IAogICAgICAgICAgICAgICAgc3lzdGVtSGVhbHRoY2FyZUZhY2lsaXR5SWRlbnRpdHkgCiAgICAgICAgICAgICAgICBzeXN0ZW1Db2Rlc1ZhbGlkYXRvciAKICAgICAgICAgICAgICAgIHN5c3RlbUV2ZW50QnVzIAogICAgICAgICAgICAgICAgc3lzdGVtQmxvYnMKICAgICAgICAgICAgfQogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgc3lzdGVtQ2xhaW1zU3VibWlzc2lvbiAiQ29udGFpbmVycyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYW5pbWF0aW9uIHsKICAgICAgICAgICAgICAgIHVzZXJIZWFsdGhjYXJlRmFjaWxpdHkgc3lzdGVtSGVhbHRoY2FyZUZhY2lsaXR5SWRlbnRpdHkgICAKICAgICAgICAgICAgICAgIHNpbmdsZVBhZ2VBcHBsaWNhdGlvbgogICAgICAgICAgICAgICAgYXBpQXBwbGljYXRpb24gc3lzdGVtQ29kZXNWYWxpZGF0b3Igc3lzdGVtRXZlbnRCdXMgc3lzdGVtQmxvYnMgZGF0YWJhc2UKICAgICAgICAgICAgfQogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgYXBpQXBwbGljYXRpb24gIkNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGFuaW1hdGlvbiB7CiAgICAgICAgICAgICAgICBzaW5nbGVQYWdlQXBwbGljYXRpb24gCiAgICAgICAgICAgICAgICBiYXRjaEZpbGVzQ29udHJvbGxlcgogICAgICAgICAgICAgICAgY29kZXNWYWxpZGF0aW9uRmFjYWRlIHN5c3RlbUNvZGVzVmFsaWRhdG9yCiAgICAgICAgICAgICAgICBhdXRob3JpemF0aW9uQ29tcG9uZW50IHN5c3RlbUhlYWx0aGNhcmVGYWNpbGl0eUlkZW50aXR5CiAgICAgICAgICAgICAgICBwZXJzaXN0ZW5jZUNvbXBvbmVudCBkYXRhYmFzZQogICAgICAgICAgICAgICAgZmlsZVN0b3JhZ2VDb21wb25lbnQgc3lzdGVtQmxvYnMKICAgICAgICAgICAgICAgIGV2ZW50QnVzQ29tcG9lbmVudCBzeXN0ZW1FdmVudEJ1cwogICAgICAgICAgICB9CiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2OGJkCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU3VwcG9ydGluZyBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgewogICAgICAgICAgICAgICAgc2hhcGUgcGVyc29uCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwODQyN2IKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzQzOGRkNQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIldlYiBCcm93c2VyIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBXZWJCcm93c2VyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiTW9iaWxlIEFwcCIgewogICAgICAgICAgICAgICAgc2hhcGUgTW9iaWxlRGV2aWNlTGFuZHNjYXBlCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29tcG9uZW50IiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4NWJiZjAKICAgICAgICAgICAgICAgIGNvbG9yICMwMDAwMDAKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCn0K"
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "name" : "Healthcare facility user",
+      "relationships" : [ {
+        "id" : "18",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "7",
+        "description" : "Manages batch files",
+        "technology" : "HTTPS"
+      }, {
+        "id" : "17",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "Authenticates in"
+      }, {
+        "id" : "16",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "6",
+        "description" : "Uses"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "5",
+      "tags" : "Element,Software System,Supporting System",
+      "name" : "Blob storage",
+      "description" : "Azure Blobs storage",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "3",
+      "tags" : "Element,Software System,Supporting System",
+      "name" : "Codes validator",
+      "description" : "Allows diagnosis and medicine code validation",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "4",
+      "tags" : "Element,Software System,Supporting System",
+      "name" : "Event bus",
+      "description" : "Allows event-driven integration with other systems",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "2",
+      "tags" : "Element,Software System,Supporting System",
+      "name" : "Healthcare Facility Identity",
+      "description" : "Allows a user to authenticate",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "6",
+      "tags" : "Element,Software System",
+      "name" : "Claims submission",
+      "description" : "Allows a Healthcare Facility user to upload and submit a batch file",
+      "relationships" : [ {
+        "id" : "32",
+        "sourceId" : "6",
+        "destinationId" : "5",
+        "description" : "Stores files in",
+        "linkedRelationshipId" : "30"
+      }, {
+        "id" : "23",
+        "sourceId" : "6",
+        "destinationId" : "2",
+        "description" : "Authorizes a user in",
+        "linkedRelationshipId" : "21"
+      }, {
+        "id" : "26",
+        "sourceId" : "6",
+        "destinationId" : "3",
+        "description" : "Validates data bys uisng",
+        "linkedRelationshipId" : "24"
+      }, {
+        "id" : "29",
+        "sourceId" : "6",
+        "destinationId" : "4",
+        "description" : "Sends integration events to",
+        "linkedRelationshipId" : "27"
+      } ],
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "15",
+        "tags" : "Element,Container,Database",
+        "name" : "Database",
+        "description" : "Stores batch file processing related data",
+        "technology" : "SQL Server"
+      }, {
+        "id" : "7",
+        "tags" : "Element,Container,Web Browser",
+        "name" : "Single-Page Application",
+        "description" : "Provides all of the upload and submission functionalities to healthcare facility via their web browser.",
+        "relationships" : [ {
+          "id" : "20",
+          "sourceId" : "7",
+          "destinationId" : "8",
+          "description" : "Makes API calls to",
+          "technology" : "REST/HTTPS",
+          "linkedRelationshipId" : "19"
+        }, {
+          "id" : "19",
+          "tags" : "Relationship",
+          "sourceId" : "7",
+          "destinationId" : "9",
+          "description" : "Makes API calls to",
+          "technology" : "REST/HTTPS"
+        } ],
+        "technology" : "Angular"
+      }, {
+        "id" : "8",
+        "tags" : "Element,Container",
+        "name" : "API Application",
+        "description" : "Provides upload and submission functionalities via a REST API.",
+        "relationships" : [ {
+          "id" : "22",
+          "sourceId" : "8",
+          "destinationId" : "2",
+          "description" : "Authorizes a user in",
+          "linkedRelationshipId" : "21"
+        }, {
+          "id" : "34",
+          "sourceId" : "8",
+          "destinationId" : "15",
+          "description" : "Reads and writes data from/to",
+          "linkedRelationshipId" : "33"
+        }, {
+          "id" : "25",
+          "sourceId" : "8",
+          "destinationId" : "3",
+          "description" : "Validates data bys uisng",
+          "linkedRelationshipId" : "24"
+        }, {
+          "id" : "31",
+          "sourceId" : "8",
+          "destinationId" : "5",
+          "description" : "Stores files in",
+          "linkedRelationshipId" : "30"
+        }, {
+          "id" : "28",
+          "sourceId" : "8",
+          "destinationId" : "4",
+          "description" : "Sends integration events to",
+          "linkedRelationshipId" : "27"
+        } ],
+        "technology" : "ASP.NET Core API",
+        "components" : [ {
+          "id" : "10",
+          "tags" : "Element,Component",
+          "name" : "Codes validation Facade",
+          "description" : "Allows validating diagnosis and medicines code",
+          "relationships" : [ {
+            "id" : "24",
+            "tags" : "Relationship",
+            "sourceId" : "10",
+            "destinationId" : "3",
+            "description" : "Validates data bys uisng"
+          } ],
+          "technology" : "net6 library",
+          "size" : 0
+        }, {
+          "id" : "13",
+          "tags" : "Element,Component",
+          "name" : "File Storage Component",
+          "description" : "Allows to read and write files from Blobs.",
+          "relationships" : [ {
+            "id" : "30",
+            "tags" : "Relationship",
+            "sourceId" : "13",
+            "destinationId" : "5",
+            "description" : "Stores files in"
+          } ],
+          "technology" : "net6 library",
+          "size" : 0
+        }, {
+          "id" : "9",
+          "tags" : "Element,Component",
+          "name" : "Batch Files Controller",
+          "description" : "Allows a healthcare facility to operate on batch files.",
+          "technology" : "ASP.NET Core Controller",
+          "size" : 0
+        }, {
+          "id" : "12",
+          "tags" : "Element,Component",
+          "name" : "Persistence Component",
+          "description" : "Allows to read and write from data store.",
+          "relationships" : [ {
+            "id" : "33",
+            "tags" : "Relationship",
+            "sourceId" : "12",
+            "destinationId" : "15",
+            "description" : "Reads and writes data from/to"
+          } ],
+          "technology" : "EF Core",
+          "size" : 0
+        }, {
+          "id" : "11",
+          "tags" : "Element,Component",
+          "name" : "Authorization Component",
+          "description" : "Allows authorizing a user.",
+          "relationships" : [ {
+            "id" : "21",
+            "tags" : "Relationship",
+            "sourceId" : "11",
+            "destinationId" : "2",
+            "description" : "Authorizes a user in"
+          } ],
+          "technology" : "OpenID Conect middleware",
+          "size" : 0
+        }, {
+          "id" : "14",
+          "tags" : "Element,Component",
+          "name" : "Event Bus Component",
+          "description" : "Allows to send events into Bus",
+          "relationships" : [ {
+            "id" : "27",
+            "tags" : "Relationship",
+            "sourceId" : "14",
+            "destinationId" : "4",
+            "description" : "Sends integration events to"
+          } ],
+          "technology" : "net6 library",
+          "size" : 0
+        } ]
+      } ],
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemContextViews" : [ {
+      "softwareSystemId" : "6",
+      "key" : "SystemContext",
+      "order" : 1,
+      "paperSize" : "A4_Landscape",
+      "dimensions" : {
+        "width" : 3116,
+        "height" : 2016
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "animations" : [ {
+        "order" : 1,
+        "elements" : [ "1" ]
+      }, {
+        "order" : 2,
+        "elements" : [ "2" ],
+        "relationships" : [ "17" ]
+      }, {
+        "order" : 3,
+        "elements" : [ "3" ]
+      }, {
+        "order" : 4,
+        "elements" : [ "4" ]
+      }, {
+        "order" : 5,
+        "elements" : [ "5" ]
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "29"
+      }, {
+        "id" : "17"
+      }, {
+        "id" : "16"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "32"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 644,
+        "y" : 207
+      }, {
+        "id" : "2",
+        "x" : 210,
+        "y" : 1507
+      }, {
+        "id" : "3",
+        "x" : 960,
+        "y" : 1507
+      }, {
+        "id" : "4",
+        "x" : 1710,
+        "y" : 1507
+      }, {
+        "id" : "5",
+        "x" : 2460,
+        "y" : 1507
+      }, {
+        "id" : "6",
+        "x" : 960,
+        "y" : 907
+      } ]
+    } ],
+    "containerViews" : [ {
+      "softwareSystemId" : "6",
+      "key" : "Containers",
+      "order" : 2,
+      "paperSize" : "A3_Landscape",
+      "dimensions" : {
+        "width" : 4004,
+        "height" : 2720
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "animations" : [ {
+        "order" : 1,
+        "elements" : [ "1", "2" ],
+        "relationships" : [ "17" ]
+      }, {
+        "order" : 2,
+        "elements" : [ "7" ],
+        "relationships" : [ "18" ]
+      }, {
+        "order" : 3,
+        "elements" : [ "3", "4", "15", "5", "8" ],
+        "relationships" : [ "22", "34", "25", "28", "20", "31" ]
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "17"
+      }, {
+        "id" : "28"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "22",
+        "vertices" : [ {
+          "x" : 3179,
+          "y" : 2108
+        } ]
+      }, {
+        "id" : "20"
+      }, {
+        "id" : "31",
+        "vertices" : [ {
+          "x" : 2429,
+          "y" : 2108
+        } ]
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1270,
+        "y" : 208
+      }, {
+        "id" : "2",
+        "x" : 3329,
+        "y" : 2108
+      }, {
+        "id" : "3",
+        "x" : 1079,
+        "y" : 2108
+      }, {
+        "id" : "4",
+        "x" : 1829,
+        "y" : 2108
+      }, {
+        "id" : "15",
+        "x" : 329,
+        "y" : 2108
+      }, {
+        "id" : "5",
+        "x" : 2579,
+        "y" : 2108
+      }, {
+        "id" : "7",
+        "x" : 329,
+        "y" : 908
+      }, {
+        "id" : "8",
+        "x" : 329,
+        "y" : 1508
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "Components",
+      "order" : 3,
+      "paperSize" : "A3_Landscape",
+      "dimensions" : {
+        "width" : 4858,
+        "height" : 1916
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "animations" : [ {
+        "order" : 1,
+        "elements" : [ "7" ]
+      }, {
+        "order" : 2,
+        "elements" : [ "9" ],
+        "relationships" : [ "19" ]
+      }, {
+        "order" : 3,
+        "elements" : [ "3", "10" ],
+        "relationships" : [ "24" ]
+      }, {
+        "order" : 4,
+        "elements" : [ "11", "2" ],
+        "relationships" : [ "21" ]
+      }, {
+        "order" : 5,
+        "elements" : [ "12", "15" ],
+        "relationships" : [ "33" ]
+      }, {
+        "order" : 6,
+        "elements" : [ "13", "5" ],
+        "relationships" : [ "30" ]
+      }, {
+        "order" : 7,
+        "elements" : [ "14", "4" ],
+        "relationships" : [ "27" ]
+      } ],
+      "containerId" : "8",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "27"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "30"
+      }, {
+        "id" : "19"
+      } ],
+      "elements" : [ {
+        "id" : "11",
+        "x" : 329,
+        "y" : 808
+      }, {
+        "id" : "12",
+        "x" : 1829,
+        "y" : 808
+      }, {
+        "id" : "13",
+        "x" : 2579,
+        "y" : 808
+      }, {
+        "id" : "14",
+        "x" : 3329,
+        "y" : 808
+      }, {
+        "id" : "15",
+        "x" : 1829,
+        "y" : 1408
+      }, {
+        "id" : "2",
+        "x" : 329,
+        "y" : 1408
+      }, {
+        "id" : "3",
+        "x" : 4079,
+        "y" : 1408
+      }, {
+        "id" : "4",
+        "x" : 3329,
+        "y" : 1408
+      }, {
+        "id" : "5",
+        "x" : 2579,
+        "y" : 1408
+      }, {
+        "id" : "7",
+        "x" : 1079,
+        "y" : 208
+      }, {
+        "id" : "9",
+        "x" : 1079,
+        "y" : 808
+      }, {
+        "id" : "10",
+        "x" : 4079,
+        "y" : 808
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Software System",
+          "background" : "#1168bd",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Supporting System",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Person",
+          "background" : "#08427b",
+          "color" : "#ffffff",
+          "shape" : "Person"
+        }, {
+          "tag" : "Container",
+          "background" : "#438dd5",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Web Browser",
+          "shape" : "WebBrowser"
+        }, {
+          "tag" : "Mobile App",
+          "shape" : "MobileDeviceLandscape"
+        }, {
+          "tag" : "Database",
+          "shape" : "Cylinder"
+        }, {
+          "tag" : "Component",
+          "background" : "#85bbf0",
+          "color" : "#000000"
+        } ]
+      },
+      "terminology" : { },
+      "lastSavedView" : "SystemContext"
+    }
+  }
+}

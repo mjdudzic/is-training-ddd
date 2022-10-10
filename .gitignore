@@ -1,4 +1,3 @@
-docs/
 bin/
 obj/
 .vs/
@@ -24,3 +23,11 @@ VersionInfo.cs
 #logs
 **/App_Data/logs/*
 **/logs/*
+
+# compiled output  
+/dist  
+/tmp  
+/out-tsc  
+  
+# dependencies  
+/node_modules 
