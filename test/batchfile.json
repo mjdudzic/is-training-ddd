@@ -1,0 +1,30 @@
+{
+	"AccreditationCode": "AccreditationCode_12345",
+	"CreatedAt": "2022-01-01",
+	"Claims": [
+		{
+			"ClaimNumber": "ClaimNumber_1",
+			"ServiceCode": "ABC-001",
+			"ClaimedAmoun": 123.5,
+			"PatientInsuranceNumber": "PatientInsuranceNumber_0001"
+		},
+		{
+			"ClaimNumber": "ClaimNumber_2",
+			"ServiceCode": "ABC-002",
+			"ClaimedAmoun": 100.5,
+			"PatientInsuranceNumber": "PatientInsuranceNumber_0002"
+		},
+		{
+			"ClaimNumber": "ClaimNumber_3",
+			"ServiceCode": "ABC-003",
+			"ClaimedAmoun": 100.5,
+			"PatientInsuranceNumber": "PatientInsuranceNumber_0003"
+		},
+		{
+			"ClaimNumber": "ClaimNumber_4",
+			"ServiceCode": "ABC-004",
+			"ClaimedAmoun": 100.5,
+			"PatientInsuranceNumber": "PatientInsuranceNumber_0004"
+		}
+	]
+}

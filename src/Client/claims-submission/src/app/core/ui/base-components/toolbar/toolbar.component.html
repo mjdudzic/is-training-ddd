@@ -1,0 +1,28 @@
+<mat-toolbar class="top-bar">
+	<mat-toolbar-row>
+		<span class="spacer"></span>
+
+		<button mat-icon-button class="favorite-icon" matTooltip="Notifications">
+			<mat-icon class="material-icons-outlined" matListIcon>notifications</mat-icon>
+		</button>
+
+		<span class="user-info">
+			<mat-list [matMenuTriggerFor]="menu">
+				<mat-list-item>
+					<mat-icon class="material-icons-outlined" matListIcon>face</mat-icon>
+					<h4 mat-line>User</h4>
+				</mat-list-item>
+			</mat-list>
+			<mat-menu #menu="matMenu">
+				<button mat-menu-item (click)="changePassword()">
+					<mat-icon>lock_reset</mat-icon>
+					<span>Change password</span>
+				</button>
+			</mat-menu>
+		</span>
+
+		<button mat-icon-button class="favorite-icon" matTooltip="Logout">
+			<mat-icon class="material-icons-outlined" matListIcon (click)="resolveLogoutSelected()">logout</mat-icon>
+		</button>
+	</mat-toolbar-row>
+</mat-toolbar>

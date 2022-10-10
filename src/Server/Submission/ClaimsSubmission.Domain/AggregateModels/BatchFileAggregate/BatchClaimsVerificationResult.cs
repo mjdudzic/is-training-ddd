@@ -1,0 +1,3 @@
+﻿namespace ClaimsSubmission.Domain.AggregateModels.BatchFileAggregate;
+
+public record BatchClaimsVerificationResult(int ClaimsTotalCount, IReadOnlyCollection<ClaimCodeVerificationResult> ClaimCodeVerificationResults);

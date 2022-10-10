@@ -1,0 +1,69 @@
+@import '../../../../../assets/scss/variables.scss';
+
+:host {
+	display: flex;
+	height: 100vh;
+	position: relative;
+}
+
+.mat-sidenav-container {
+	height: 100%;
+	width: 100%;
+	background: $background-color;
+
+	.mat-sidenav {
+		width: 235px;
+		background: $nav-bar-color;
+
+		.mat-nav-list {
+			margin: 0 10px;
+
+			.app-name {
+				margin-bottom: 60px;
+
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.mat-list-item {
+			height: 42px;
+			margin-top: 12px;
+
+			.app-version {
+				color: $menu-icons-color;
+				opacity: 0.6;
+				font-size: 13px;
+			}
+		}
+
+		.mat-list-item.active-route span.mat-line {
+			font-weight: 500;
+		}
+
+		.mat-list-item.active-route {
+			background: $nav-bar-active-color;
+			border-radius: 10px;
+		}
+	}
+
+	.mat-sidenav-content {
+		position: relative;
+		top: 0;
+	}
+}
+
+.mat-icon,
+.mat-line {
+	color: $menu-icons-color;
+}
+
+.bottomStick {
+	position: absolute;
+	bottom: 0;
+}
+
+.bottomRelative {
+	position: relative;
+}

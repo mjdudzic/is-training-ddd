@@ -1,0 +1,68 @@
+<section class="file-upload">
+    <div class="center">
+        <ngx-file-drop (onFileDrop)="onFileDropped($event)">
+            <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Drag and drop or&nbsp;
+                <a [routerLink]="[]"  color="primary"  (click)="openFileSelector()">browse&nbsp;</a>
+                your files&nbsp;
+            </ng-template>
+        </ngx-file-drop>
+    </div>
+</section>
+<section class="default-table">
+	<table mat-table [dataSource]="(batchFiles$ | async)!" [trackBy]="trackById">
+		<ng-container matColumnDef="createdAt">
+			<th mat-header-cell *matHeaderCellDef>Created at</th>
+			<td mat-cell *matCellDef="let batchFile">{{ batchFile?.createdAt | date:'medium' }}</td>
+		</ng-container>
+
+        <ng-container matColumnDef="healthcareFacilityId">
+			<th mat-header-cell *matHeaderCellDef>Healthcare Facility</th>
+			<td mat-cell *matCellDef="let batchFile">{{ batchFile?.healthcareFacilityId }}</td>
+		</ng-container>
+
+        <ng-container matColumnDef="fileOriginalName">
+			<th mat-header-cell *matHeaderCellDef>File name</th>
+			<td mat-cell *matCellDef="let batchFile">{{ batchFile?.fileOriginalName }}</td>
+		</ng-container>
+
+        <ng-container matColumnDef="claimsTotalCount">
+			<th mat-header-cell *matHeaderCellDef>Claims number</th>
+			<td mat-cell *matCellDef="let batchFile">{{ batchFile?.claimsTotalCount }}</td>
+		</ng-container>
+
+        <ng-container matColumnDef="validClaimsRatio">
+			<th mat-header-cell *matHeaderCellDef>Valid claims %</th>
+			<td mat-cell *matCellDef="let batchFile">{{ batchFile?.validClaimsRatio | percent }}</td>
+		</ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let batchFile">
+                <button *ngIf="isSubmittable(batchFile) && !batchFile.submittedAt"
+					mat-icon-button
+					(click)="submit(batchFile.id)"
+					[disabled]="!isSubmittable(batchFile) || batchFile.submittedAt"
+				>
+					<mat-icon class="submit-batch-icon" matTooltip="Submit the batch file">done</mat-icon>
+				</button>
+                <button *ngIf="batchFile.reportUri"
+					mat-icon-button
+					(click)="submit(batchFile.id)"
+				>
+					<mat-icon class="submit-batch-icon" matTooltip="Download submission report">article</mat-icon>
+				</button>
+            </td>
+        </ng-container>
+
+		<tr mat-header-row *matHeaderRowDef="columnsToDisplay" fxLayoutGap="12px"></tr>
+		<tr *matRowDef="let batch; columns: columnsToDisplay" mat-row></tr>
+	</table>
+</section>
+
+<div class="action-button-container">
+    <button mat-fab color="primary" matTooltip="Refresh" (click)="refresh()">
+        <mat-icon matListIcon>refresh</mat-icon>
+    </button>
+</div>
+

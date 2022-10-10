@@ -35,7 +35,8 @@ To czy na komupterze jest zainstalowany .NET 6 można sprawdzić wykonując poni
 
 ### VS Code
 
-Narzędzie ułatwiające budowę i uruchamianie aplikacji np. z wykorzytaniem technologii Angular
+Narzędzie ułatwiające budowę i uruchamianie aplikacji np. z wykorzyataniem technologii Angular
+
 Do pobrania tutaj: https://code.visualstudio.com/
 
 ### Git dla systemu Windows

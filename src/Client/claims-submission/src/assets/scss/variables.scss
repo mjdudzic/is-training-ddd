@@ -1,0 +1,60 @@
+// Common
+$theme-color: #40ad36;
+$nav-bar-color: #027ab4;
+$nav-bar-active-color: #01629b;
+$background-color: #f4f6f7;
+$confirm-color: #027ab4;
+$reject-color: #e83916;
+$warning-color: #ffd74f;
+$valid-color: rgba(60, 181, 75, 1);
+$divider-border: 1px solid rgba(0, 0, 0, 0.05);
+$gray-text-color: rgba(0, 0, 0, 0.6);
+
+// Menu
+$nav-bar-color: #027ab4;
+$nav-bar-active-color: #01629b;
+$menu-icons-color: #ffffff;
+
+// Toolbars
+$toolbar-header-color: #000000;
+$toolbar-color: #ffffff;
+$helper-toolbar-color: #ffffff;
+$toolbar-icons-color: rgba(0, 0, 0, 0.35);
+$toolbar-text-color: rgba(0, 0, 0, 0.38);
+
+$suffix-color: rgba(0, 0, 0, 0.54);
+$error-color: #b00020;
+
+$opacity-high-emphasis-surface: 0.87;
+$opacity-medium-emphasis-surface: 0.6;
+$opacity-disabled-surface: 0.38;
+
+$opacity-high-emphasis-primary: 1;
+$opacity-medium-emphasis-primary: 0.74;
+$opacity-disabled-primary: 0.38;
+
+$opacity-outline: 0.12;
+
+// Tables
+$table-header-text-color: rgba(0, 0, 0, 0.35);
+$table-main-cell-text-color: rgba(0, 0, 0, 1);
+$table-cell-text-color: rgba(0, 0, 0, 0.6);
+$table-primary-chip-color: #01bad9;
+
+// Progress Bars
+$progress-bar-amount-primary-color: #027ab4;
+$progress-bar-amount-buffer-color: #e6ebec;
+$progress-bar-claim-total-count-color: #000000;
+$progress-bar-claim-accepted-color: #3cb54b;
+$progress-bar-claim-rejected-color: #b00020;
+$progress-bar-claim-to-process-color: #e6ebec;
+
+// Badge
+$badge-background-color: #cad831;
+$badge-text-color: #000000;
+
+//Notes
+$signature-text-color: #847777;
+
+//Buttons
+$btn-color-default: #027ab4;

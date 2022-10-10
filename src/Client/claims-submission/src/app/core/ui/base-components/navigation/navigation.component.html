@@ -1,0 +1,25 @@
+<mat-sidenav-container [autosize]="true" [hasBackdrop]="false">
+    <mat-sidenav #sidenav mode="side" [opened]="true" class="mat-elevation-z3" fixedInViewport="true">
+        <mat-nav-list>
+            <div class="app-name">
+                <mat-list-item>
+                    <!--          App Logo should be here-->
+                    <h3 mat-line>Claims Submission</h3>
+                </mat-list-item>
+            </div>
+
+            <div>
+                <mat-list-item [routerLink]="RoutePaths.BatchFiles" routerLinkActive="active-route">
+                    <mat-icon class="material-icons-outlined" matListIcon>playlist_add_check</mat-icon>
+                    <span matLine>Batch files</span>
+                </mat-list-item>
+                
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-toolbar></app-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

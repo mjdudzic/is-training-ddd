@@ -1,0 +1,14 @@
+#documents: 'src/**/*.graphql.query.ts'
+generates:
+  src/app/shared/graphql/graphql-vetting.schema.ts:
+    schema: "http://localhost:5787/api/graphql"
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-apollo-angular"
+  src/app/shared/graphql/graphql-batch-processing.schema.ts:
+    schema: "http://localhost:5785/api/graphql"
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-apollo-angular"

@@ -1,0 +1,195 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+@import './variables.scss';
+
+$eclaims_batchprocessing-palette: (
+	50: #e3f2fd,
+	100: #bbdefb,
+	200: #90caf9,
+	300: #64b5f6,
+	400: #01bad9,
+	500: #027ab4,
+	600: #01629b,
+	700: #183861,
+	800: #183861,
+	900: #91a4b7,
+	A100: #82b1ff,
+	A200: #448aff,
+	A400: #2979ff,
+	A700: #29578f,
+	contrast: (
+		50: $dark-primary-text,
+		100: $dark-primary-text,
+		200: $dark-primary-text,
+		300: $dark-primary-text,
+		400: $light-primary-text,
+		500: $light-primary-text,
+		600: $light-primary-text,
+		700: $light-primary-text,
+		800: $light-primary-text,
+		900: $light-primary-text,
+		A100: $dark-primary-text,
+		A200: $light-primary-text,
+		A400: $light-primary-text,
+		A700: $light-primary-text
+	)
+);
+
+@include mat.core();
+
+$primary: mat.define-palette($eclaims_batchprocessing-palette, 500);
+$accent: mat.define-palette($eclaims_batchprocessing-palette, 500);
+
+$theme: mat.define-light-theme($primary, $accent);
+
+@include mat.all-component-themes($theme);
+
+h2.mat-dialog-title {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+}
+
+$caption-custom: mat.define-typography-level(
+	$font-family: Roboto,
+	$font-weight: 400,
+	$font-size: 12px,
+	$line-height: 16px,
+	$letter-spacing: 0.4000000059604645px
+);
+
+$button-custom: mat.define-typography-level(
+	$font-family: Roboto,
+	$font-weight: 500,
+	$font-size: 14px,
+	$line-height: 16px,
+	$letter-spacing: 1.25px
+);
+
+$body-1-custom: mat.define-typography-level(
+	$font-weight: 400,
+	$font-size: 16px,
+	$line-height: 24px,
+	$font-family: Roboto,
+	$letter-spacing: 0.5px
+);
+
+$body-2-custom: mat.define-typography-level(
+	$font-weight: 400,
+	$font-size: 14px,
+	$line-height: 20px,
+	$font-family: Roboto,
+	$letter-spacing: 0.25px
+);
+
+$subheading-1-custom: mat.define-typography-level(
+	$font-weight: 400,
+	$font-size: 34px,
+	$line-height: 36px,
+	$font-family: Roboto,
+	$letter-spacing: 0px
+);
+
+$subheading-2-custom: mat.define-typography-level(
+	$font-weight: 400,
+	$font-size: 48px,
+	$line-height: 56px,
+	$font-family: Roboto,
+	$letter-spacing: 0px
+);
+
+$typography: mat.define-typography-config(
+	$button: $button-custom,
+	$caption: $caption-custom,
+	$body-1: $body-1-custom,
+	$body-2: $body-2-custom,
+	$subheading-1: $subheading-1-custom,
+	$subheading-2: $subheading-2-custom
+);
+
+@include mat.core($typography);
+
+//Other typography settings
+@mixin subtitle-1-font-size {
+	font-size: 16px;
+}
+
+@mixin subtitle-1 {
+	@include subtitle-1-font-size;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+}
+
+@mixin subtitle-2 {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
+}
+
+@mixin headline-5 {
+	font-family: 'Roboto';
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.18000000715255737px;
+}
+
+@mixin headline-6 {
+	font-family: 'Roboto';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.15000000596046448px;
+}
+
+.mat-expansion-panel-header {
+	font: {
+		family: mat.font-family($typography, 'caption');
+		size: mat.font-size($typography, 'caption');
+		weight: mat.font-weight($typography, 'caption');
+	}
+}
+
+.mat-list-base {
+	.mat-list-item {
+		@include subtitle-1-font-size;
+	}
+
+	.mat-list-option {
+		@include subtitle-1-font-size;
+	}
+}
+
+.mat-option {
+	font: {
+		family: mat.font-family($typography);
+		size: mat.font-size($typography, 'body-1');
+	}
+}
+
+.subtitle-1-text {
+	@include subtitle-1;
+}
+
+.subtitle-2-text {
+	@include subtitle-2;
+}
+
+.mat-h5,
+.mat-typography .mat-h5,
+.mat-typography h5 {
+	@include headline-5;
+}
+
+.mat-h6,
+.mat-typography .mat-h6,
+.mat-typography h6 {
+	@include headline-6;
+}

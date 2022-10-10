@@ -1,0 +1,448 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin-ext');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
+@import 'src/assets/scss/theme.scss';
+
+@import 'ngx-toastr/toastr';
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+.mat-button,
+.mat-flat-button,
+.mat-stroked-button,
+.mat-raised-button {
+	text-transform: uppercase;
+}
+
+.mat-stroked-button,
+.mat-button {
+	color: $confirm-color;
+	text-transform: uppercase;
+}
+
+.spinner-panel {
+	mat-dialog-container {
+		box-shadow: none;
+		background: none;
+		overflow: hidden;
+	}
+}
+
+.cell-header {
+	display: flex;
+	padding-top: 15px;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+.action-button-container {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+
+.action-button-spacer {
+	min-height: 90px;
+}
+
+.actions {
+	justify-content: flex-end;
+}
+
+.mat-dialog-actions {
+	justify-content: flex-end;
+}
+
+.search-field,
+.select-field,
+.cell-header-span {
+	align-self: flex-start;
+}
+
+.text-ellipsis {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.date-column {
+	min-width: 70px;
+}
+
+h2.mat-dialog-title {
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.transparent .mat-dialog-container {
+	box-shadow: none;
+	background: rgba(0, 0, 0, 0);
+}
+
+.mat-cell,
+.mat-column-actions {
+	text-align: center;
+}
+
+.mat-sort-header-container,
+.mat-header-cell {
+	justify-content: center;
+
+	.mat-checkbox {
+		margin-right: 10px;
+	}
+}
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+.hide {
+	display: none;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.text-gray {
+	color: rgba($toolbar-header-color, $opacity-medium-emphasis-surface);
+}
+
+.is-invalid {
+	.mat-icon-button {
+		color: $error-color !important;
+	}
+
+	.mat-chip {
+		background-color: $error-color !important;
+		color: $toolbar-color !important;
+	}
+}
+
+.is-valid {
+	.mat-chip {
+		background-color: $valid-color !important;
+		color: $toolbar-color !important;
+	}
+}
+
+.mat-chip {
+	white-space: nowrap;
+}
+
+.expansion-panel-transparent {
+	border: none;
+	background-color: transparent;
+	box-shadow: none !important;
+
+	.mat-list-item-content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		& > div {
+			flex: 1;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.mat-checkbox {
+	color: $gray-text-color;
+}
+
+.text-weight-medium {
+	font-weight: 500;
+}
+
+.text-weight-regular {
+	font-weight: 400;
+}
+
+@mixin bottom-rounded-box {
+	border-radius: 0px 0px 10px 10px;
+}
+
+@mixin top-rounded-box {
+	border-radius: 10px 10px 0px 0px;
+}
+
+@mixin red-container {
+	display: flex;
+	background-color: rgba($error-color, $opacity-outline);
+	border-radius: 4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 0px 5px 0px 5px;
+}
+
+@mixin caption-value-pair {
+	.caption {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 0.25px;
+	}
+	.value {
+		font-family: 'Roboto';
+		font-style: normal;
+		weight: medium;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 0.25px;
+	}
+}
+
+@mixin claim-details-table {
+	:host ::ng-deep {
+		.mat-form-field-flex > .mat-form-field-infix {
+			padding: 0.4em 0px !important;
+			border-top: 0.4em solid transparent;
+		}
+
+		.mat-form-field-wrapper {
+			padding: 0;
+		}
+
+		.mat-form-field-label-wrapper {
+			top: -1.5em;
+		}
+
+		.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+			transform: translateY(-1.1em) scale(0.75);
+			width: 133.33333%;
+		}
+	}
+
+	.mat-row .mat-cell {
+		.action-button {
+			visibility: visible;
+			text-transform: uppercase;
+			border: none;
+			background-color: inherit;
+			cursor: pointer;
+		}
+
+		.number-input {
+			width: 80px;
+		}
+
+		.correction-code-input {
+			width: 200px;
+		}
+	}
+}
+
+.subcaption {
+	color: $toolbar-text-color;
+}
+
+.default-table {
+	.without-paginator {
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	.no-border {
+		td {
+			border-bottom-width: 0 !important;
+		}
+	}
+
+	.selected-row {
+		background-color: $background-color;
+	}
+
+	.details-row {
+		height: 100%;
+
+		td {
+			padding: 0px 5px 0px 5px !important;
+		}
+
+		&:hover {
+			background-color: inherit !important;
+		}
+
+		.correction-item {
+			@include caption-value-pair;
+		}
+	}
+
+	.mat-table {
+		width: 100%;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		overflow: hidden !important;
+	}
+
+	.mat-paginator {
+		border-radius: 0px 0px 10px 10px;
+	}
+
+	.mat-row .mat-cell {
+		cursor: pointer;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+		button {
+			visibility: hidden;
+			color: $confirm-color;
+			text-transform: uppercase;
+		}
+	}
+
+	.mat-row:hover {
+		background-color: $background-color;
+
+		.mat-cell button {
+			visibility: visible;
+		}
+	}
+
+	.mat-header-cell {
+		color: $table-header-text-color;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		text-align: center;
+
+		.mat-icon.claims-info {
+			font-size: 16px;
+		}
+	}
+}
+
+.mat-toolbar.top-bar {
+	position: sticky;
+	top: 0;
+}
+
+.mat-toolbar {
+	position: sticky;
+	top: 80px;
+	background: $toolbar-color;
+	z-index: 10;
+
+	.mat-toolbar-row {
+		background: $toolbar-color;
+		height: 80px;
+		gap: 22px;
+
+		.filter-icon {
+			margin-left: 16px;
+			color: $toolbar-icons-color;
+
+			.mat-badge-content {
+				background-color: $badge-background-color;
+				color: $badge-text-color;
+			}
+		}
+
+		.mat-button.filter {
+			text-transform: none;
+
+			.filter-label {
+				color: $toolbar-icons-color;
+				margin-left: 8px;
+			}
+		}
+	}
+
+	.mat-toolbar-row.filter-chips {
+		min-height: 48px;
+		height: auto;
+		padding-left: 34px;
+		padding-bottom: 10px;
+		white-space: break-spaces;
+	}
+
+	.flex-column {
+		padding: 5px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-row {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+	}
+
+	mat-form-field.common-search-field {
+		margin-left: 16px;
+		top: 11px;
+		width: 338px;
+		font-size: 16px;
+
+		mat-icon {
+			color: $toolbar-icons-color;
+			margin-right: 15px;
+		}
+	}
+}
+
+.mat-tooltip {
+	white-space: pre-line !important;
+}
+
+.mat-form-field-underline {
+	display: none !important;
+}
+
+.mat-dialog-actions {
+	justify-content: end;
+}
+
+.mat-toolbar {
+	position: unset;
+	top: 0;
+
+	.mat-toolbar-row.table-selection-bar {
+		height: 56px;
+		background-color: $nav-bar-color;
+		font-size: smaller;
+
+		p {
+			margin: 0;
+			color: $toolbar-color;
+		}
+
+		.action-button > * {
+			color: $toolbar-color;
+		}
+
+		.action-button > .mat-icon {
+			vertical-align: middle;
+		}
+
+		.when-disabled[disabled] {
+			text-decoration: line-through;
+		}
+	}
+}
+
