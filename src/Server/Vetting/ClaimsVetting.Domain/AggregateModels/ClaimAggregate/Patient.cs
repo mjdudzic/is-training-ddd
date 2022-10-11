@@ -1,5 +1,6 @@
 ﻿using ClaimsVetting.Domain.SeedWork;
 using ClaimsVetting.Domain.SharedKernel;
+using MediatR;
 
 namespace ClaimsVetting.Domain.AggregateModels.ClaimAggregate;
 
@@ -18,4 +19,8 @@ internal class Patient : Entity<int>
 
     public bool IsChild(ICurrentDateTime currentDateTime) => 
         currentDateTime.UtcNow.Year - BirthDate.Year < 12;
+
+    public override void ApplyEvent(INotification @event)
+    {
+    }
 }

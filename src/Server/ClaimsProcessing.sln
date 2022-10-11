@@ -35,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutoProcessing", "AutoProce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClaimsAutoProcessing.Api", "AutoProcessing\ClaimsAutoProcessing.Api\ClaimsAutoProcessing.Api.csproj", "{A9B64287-91F2-4BDC-8398-D91BA88F321C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B8F76C08-D5A1-455C-840C-1BADE8665E0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsAutoProcessing.Tests.Integration", "AutoProcessing\Tests\ClaimsAutoProcessing.Tests.Integration\ClaimsAutoProcessing.Tests.Integration.csproj", "{FECA6B84-B274-444E-A54A-CC98C3E0BCED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,10 @@ Global
 		{A9B64287-91F2-4BDC-8398-D91BA88F321C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9B64287-91F2-4BDC-8398-D91BA88F321C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9B64287-91F2-4BDC-8398-D91BA88F321C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECA6B84-B274-444E-A54A-CC98C3E0BCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECA6B84-B274-444E-A54A-CC98C3E0BCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECA6B84-B274-444E-A54A-CC98C3E0BCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECA6B84-B274-444E-A54A-CC98C3E0BCED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +111,8 @@ Global
 		{45031145-9C81-454E-911C-EEC08EDF89FF} = {0516E915-1CED-46B5-8496-C69E3B521FB3}
 		{4937BB70-8F05-4B94-84FC-47D2F930648A} = {45031145-9C81-454E-911C-EEC08EDF89FF}
 		{A9B64287-91F2-4BDC-8398-D91BA88F321C} = {3C7D7B13-F9D2-40C3-B25E-D886B390EDEB}
+		{B8F76C08-D5A1-455C-840C-1BADE8665E0E} = {3C7D7B13-F9D2-40C3-B25E-D886B390EDEB}
+		{FECA6B84-B274-444E-A54A-CC98C3E0BCED} = {B8F76C08-D5A1-455C-840C-1BADE8665E0E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66301AD0-DFB7-453D-AE44-EB09F8A80C49}

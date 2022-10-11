@@ -1,9 +1,10 @@
 ﻿using ClaimsVetting.Domain.SeedWork;
 using ClaimsVetting.Domain.SharedKernel;
+using MediatR;
 
 namespace ClaimsVetting.Domain.AggregateModels.ClaimAggregate;
 
-internal class Medicine : Entity<int>
+public class Medicine : Entity<int>
 {
     private List<MedicineCorrection> _corrections = new();
 
@@ -34,5 +35,9 @@ internal class Medicine : Entity<int>
         TotalPrice = TotalPrice with { Amount = newAmount };
 
         return true;
+    }
+
+    public override void ApplyEvent(INotification @event)
+    {
     }
 }

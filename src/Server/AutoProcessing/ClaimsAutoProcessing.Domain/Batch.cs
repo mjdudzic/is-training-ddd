@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public string HealthcareFacilityCode { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool AutoProcessingCompleted { get; set; }
         public IReadOnlyCollection<BatchClaim> Claims { get; set; }
     }
 }

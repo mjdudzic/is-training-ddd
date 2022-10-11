@@ -1,5 +1,6 @@
 ﻿using ClaimsVetting.Domain.SeedWork;
 using ClaimsVetting.Domain.SharedKernel;
+using MediatR;
 
 namespace ClaimsVetting.Domain.AggregateModels.ClaimAggregate;
 
@@ -32,5 +33,9 @@ internal class Diagnosis : Entity<int>
         Code = newCode;
 
         return true;
+    }
+
+    public override void ApplyEvent(INotification @event)
+    {
     }
 }

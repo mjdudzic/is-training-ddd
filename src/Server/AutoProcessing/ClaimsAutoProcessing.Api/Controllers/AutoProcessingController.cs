@@ -1,6 +1,8 @@
 using ClaimsAutoProcessing.Api.Application.Commands;
+using ClaimsAutoProcessing.Api.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClaimsAutoProcessing.Api.Controllers
 {
@@ -9,22 +11,32 @@ namespace ClaimsAutoProcessing.Api.Controllers
     public class AutoProcessingController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly ClaimsAutoProcessingContext _context;
         private readonly ILogger<AutoProcessingController> _logger;
 
         public AutoProcessingController(
             IMediator mediator,
+            ClaimsAutoProcessingContext context,
             ILogger<AutoProcessingController> logger)
         {
             _mediator = mediator;
+            _context = context;
             _logger = logger;
         }
 
         [HttpPost]
-        public async Task<IActionResult> StartProcessing(int batchId)
+        public async Task<IActionResult> StartProcessing()
         {
-            var result = await _mediator.Send(new StartAutoVettingCommand(batchId));
+            var batchId = await _mediator.Send(new SyncBatchCommand());
+            await _mediator.Send(new StartAutoVettingCommand(batchId));
 
             return Ok();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await _context.Batches.Include(b => b.Claims).ToListAsync());
         }
     }
 }

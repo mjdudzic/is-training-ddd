@@ -14,6 +14,7 @@ public class BatchConfiguration : IEntityTypeConfiguration<Batch>
         builder.Property(e => e.CreatedAt);
         builder.Property(e => e.HealthcareFacilityCode);
         builder.Property(e => e.CreatedAt);
+        builder.Property(e => e.AutoProcessingCompleted);
 
         builder
             .HasMany(b => b.Claims)

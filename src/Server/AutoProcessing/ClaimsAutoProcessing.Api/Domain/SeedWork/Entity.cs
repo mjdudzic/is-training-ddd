@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace ClaimsVetting.Domain.SeedWork;
+namespace ClaimsAutoProcessing.Api.Domain.SeedWork;
 
 public abstract class Entity
 {
@@ -9,18 +9,13 @@ public abstract class Entity
     public IEnumerable<INotification> Events => _events;
 
     public void AddDomainEvent(INotification @event)
-    {
-        ApplyEvent(@event);
-        _events.Add(@event);
-    }
+        => _events.Add(@event);
 
     public void RemoveDomainEvent(INotification @event)
         => _events?.Remove(@event);
 
     public void ClearDomainEvents()
         => _events.Clear();
-
-    public abstract void ApplyEvent(INotification @event);
 }
 
 public abstract class Entity<T> : Entity

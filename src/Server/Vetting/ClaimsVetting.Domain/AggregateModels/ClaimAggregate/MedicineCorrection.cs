@@ -1,5 +1,6 @@
 ﻿using ClaimsVetting.Domain.SeedWork;
 using ClaimsVetting.Domain.SharedKernel;
+using MediatR;
 
 namespace ClaimsVetting.Domain.AggregateModels.ClaimAggregate;
 
@@ -11,4 +12,7 @@ internal class MedicineCorrection : Entity<int>
     public Price NewTotalPrice { get; set; }
     public DateTime CreatedAt { get; set; }
     public string CreatedBy { get; set; }
+    public override void ApplyEvent(INotification @event)
+    {
+    }
 }

@@ -1,5 +1,6 @@
 using ClaimsVetting.Domain.SeedWork;
 using FluentAssertions;
+using MediatR;
 
 namespace ClaimsVetting.Tests.Domain.BuildingBlocks
 {
@@ -41,6 +42,10 @@ namespace ClaimsVetting.Tests.Domain.BuildingBlocks
         {
             Id = id;
             Name = name;
+        }
+
+        public override void ApplyEvent(INotification @event)
+        {
         }
     }
 }

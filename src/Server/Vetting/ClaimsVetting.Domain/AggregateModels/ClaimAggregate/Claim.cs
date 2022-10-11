@@ -1,12 +1,14 @@
 ﻿using ClaimsVetting.Domain.AggregateModels.ClaimAggregate.Events;
 using ClaimsVetting.Domain.SeedWork;
 using ClaimsVetting.Domain.SharedKernel;
+using MediatR;
 
 namespace ClaimsVetting.Domain.AggregateModels.ClaimAggregate;
 
 public class Claim : AggregateRoot<ClaimId>
 {
     internal VettingStatus _status;
+    internal VettingResult _vettingResult;
     internal string? _vettedBy;
     internal DateTime? _vettedAt;
     internal string? _lockedBy;
@@ -16,14 +18,22 @@ public class Claim : AggregateRoot<ClaimId>
     internal Diagnosis _diagnosis;
     internal List<Medicine> _medicines;
 
+    public List<Medicine> Medicines => _medicines;
+
     internal Claim()
     {
         Id = new ClaimId(Guid.NewGuid());
         _status = VettingStatus.None;
     }
 
+    public Claim(ClaimId id)
+    {
+        Id = id;
+        _status = VettingStatus.None;
+    }
+
     public void LockForVetting(
-        ICurrentUser currentUser,
+        ICurrentUser claimOfficer,
         ICurrentDateTime currentDateTime)
     {
         if (_status != VettingStatus.None)
@@ -32,8 +42,8 @@ public class Claim : AggregateRoot<ClaimId>
         if (_lockedBy is not null)
             throw new ClaimAggregateException("Claim has been already locked");
 
-        _lockedBy = currentUser.UserId;
-        _lockedAt = currentDateTime.UtcNow;
+        //_lockedBy = claimOfficer.UserId;
+        //_lockedAt = currentDateTime.UtcNow;
 
         AddDomainEvent(new ClaimLockedForVetting(Id));
     }
@@ -48,7 +58,7 @@ public class Claim : AggregateRoot<ClaimId>
         if (_lockedBy != claimOfficer.UserId)
             throw new ClaimAggregateException("Claim is locked by other user");
 
-        SetVettingStatus(VettingStatus.Accepted, claimOfficer, currentDateTime);
+        //SetVettingStatus(VettingStatus.Accepted, claimOfficer, currentDateTime);
 
         AddDomainEvent(new ClaimAccepted(Id));
     }
@@ -133,5 +143,31 @@ public class Claim : AggregateRoot<ClaimId>
         _status = status;
         _vettedBy = claimOfficer.UserId;
         _vettedAt = currentDateTime.UtcNow;
+    }
+
+    public override void ApplyEvent(INotification @event)
+    {
+        switch (@event)
+        {
+            case ClaimLockedForVetting lockForVetting:
+                Apply(lockForVetting);
+                break;
+            case ClaimAccepted accept:
+                Apply(accept);
+                break;
+        }
+    }
+
+    private void Apply(ClaimAccepted accept)
+    {
+        _status = VettingStatus.Accepted;
+        _vettedBy = "someone";
+        _vettedAt = DateTime.Now;
+    }
+
+    private void Apply(ClaimLockedForVetting lockForVetting)
+    {
+        _lockedBy = "someone";
+        _lockedAt = DateTime.Now;
     }
 }

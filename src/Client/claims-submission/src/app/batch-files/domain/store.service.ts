@@ -12,7 +12,7 @@ export class StoreService extends IStoreService {
 		super();
 	}
 
-	public dispatch(action: BatchFiles.SubmitRequested | BatchFiles.ReportsLinkAttached): Observable<any> {
+	public dispatch(action: BatchFiles.SubmitRequested): Observable<any> {
 		return this.store.dispatch(action);
 	}
 
