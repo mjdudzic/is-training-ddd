@@ -28,7 +28,7 @@ namespace ClaimsAutoProcessing.Api.Controllers
         public async Task<IActionResult> StartProcessing()
         {
             var batchId = await _mediator.Send(new SyncBatchCommand());
-            await _mediator.Send(new StartAutoVettingCommand(batchId));
+            await _mediator.Send(new StartAutoVettingCommandV2(batchId));
 
             return Ok();
         }

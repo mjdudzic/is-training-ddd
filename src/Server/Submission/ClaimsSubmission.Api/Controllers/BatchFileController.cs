@@ -31,7 +31,7 @@ namespace ClaimsSubmission.Api.Controllers
         public async Task<IActionResult> BatchFile(Guid batchFileId, [FromBody] BatchActionDto model)
         {
             var result = await Mediator.Send(
-                new BatchFileActionCommand(new BatchFileId(batchFileId), model.BatchFileAction));
+                new BatchFileActionCommand((BatchFileId)batchFileId, model.BatchFileAction));
 
             return Ok(result);
         }

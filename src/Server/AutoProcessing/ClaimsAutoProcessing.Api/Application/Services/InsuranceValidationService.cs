@@ -2,7 +2,7 @@
 
 namespace ClaimsAutoProcessing.Api.Application.Services;
 
-public class InsuranceValidationService
+public class InsuranceValidationService : IInsuranceValidationService
 {
     public Task<InsuranceValidationResult> IsValid(BatchClaim claim)
     {

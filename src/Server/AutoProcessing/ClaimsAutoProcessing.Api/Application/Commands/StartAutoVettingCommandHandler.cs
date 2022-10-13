@@ -32,6 +32,7 @@ public class StartAutoVettingCommandHandler : IRequestHandler<StartAutoVettingCo
 
         var claims = batch.Claims;
 
+        // Insurance validation
         var insuranceCheckTasks = claims
             .Select(batchClaim => _insuranceValidationService.IsValid(batchClaim))
             .ToList();
@@ -45,6 +46,7 @@ public class StartAutoVettingCommandHandler : IRequestHandler<StartAutoVettingCo
             .ToList()
             .ForEach( c => c.PatientInsuranceValidity = false);
 
+        // Tariffs correction
         var validClaims = claims
             .Where(c => insuranceValidationResults
                 .Any(v => v.ClaimId == c.Id && v.InsuranceValid))
@@ -63,6 +65,7 @@ public class StartAutoVettingCommandHandler : IRequestHandler<StartAutoVettingCo
                 : claim.OriginalAmount;
         }
 
+        // Auto accepting
         foreach (var claim in validClaims)
         {
             var isAutoAccepted = await new ClaimNotExpensiveRule().Check(claim);
@@ -80,6 +83,7 @@ public class StartAutoVettingCommandHandler : IRequestHandler<StartAutoVettingCo
             }
         }
 
+        // Selection for audit
         var claimsToAuditCount = (int)(batch.Claims.Count * 0.3);
         var claimsToAudit = validClaims
             .Where(c => c.VettingStatus == VettingStatus.Accepted)
@@ -89,6 +93,8 @@ public class StartAutoVettingCommandHandler : IRequestHandler<StartAutoVettingCo
 
         claimsToAudit.ForEach(c => c.SelectedForAudit = true);
 
+
+        // End
         batch.AutoProcessingCompleted = true;
 
         await _context.SaveChangesAsync(cancellationToken);

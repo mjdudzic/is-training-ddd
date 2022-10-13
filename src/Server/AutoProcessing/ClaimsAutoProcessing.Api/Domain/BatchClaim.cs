@@ -11,4 +11,22 @@ public class BatchClaim
     public bool PatientInsuranceValidity { get; set; }
     public VettingStatus VettingStatus { get; set; }
     public bool SelectedForAudit { get; set; }
+
+    public void Invalidate()
+    {
+        if (VettingStatus is not VettingStatus.None)
+            throw new BatchClaimException("Invalid processing stage");
+
+        PatientInsuranceValidity = false;
+        // add event
+    }
+
+    public void SelectForAudit()
+    {
+        if (VettingStatus is not VettingStatus.Accepted)
+            throw new BatchClaimException("Invalid processing stage");
+
+        SelectedForAudit = true;
+        // add event
+    }
 }

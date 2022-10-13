@@ -29,7 +29,6 @@ namespace ClaimsAutoProcessing.Tests.Integration
                 .First(c => c.DiagnosisCode == "ANT002A");
 
             autoVettedClaim.VettingStatus.Should().Be(VettingStatus.Accepted);
-
         }
     }
 }
